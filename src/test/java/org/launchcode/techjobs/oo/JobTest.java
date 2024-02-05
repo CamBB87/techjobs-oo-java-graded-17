@@ -52,7 +52,7 @@ public class JobTest {
     @Test
     public void testToStringContainsCorrectLabelsAndData() {
         Job job = new Job("Phil", new Employer("Government"), new Location("North Pole"), new PositionType("Snow Tester"), new CoreCompetency("Can bite into snow with teeth"));
-        String expectedString = "\nID: 1\nName: Phil\nEmployer: Government\nLocation: North Pole\nPosition Type: Snow Tester\nCore Competency: Can bite into snow with teeth\n";
+        String expectedString = "\nID: 4\nName: Phil\nEmployer: Government\nLocation: North Pole\nPosition Type: Snow Tester\nCore Competency: Can bite into snow with teeth\n";
         String actualString = job.toString();
         assertEquals(expectedString, actualString);
     }
@@ -60,7 +60,7 @@ public class JobTest {
     @Test
     public void testToStringHandlesEmptyField() {
         Job job = new Job("", new Employer("Government"), new Location("North Pole"), new PositionType("Snow Tester"), new CoreCompetency("Can bite into snow with teeth"));
-        String expectedString = "\nID: 1\nName: Data not available\nEmployer: Government\nLocation: North Pole\nPosition Type: Snow Tester\nCore Competency: Can bite into snow with teeth\n";
+        String expectedString = "\nID: 3\nName: Data not available\nEmployer: Government\nLocation: North Pole\nPosition Type: Snow Tester\nCore Competency: Can bite into snow with teeth\n";
         String actualString = job.toString();
         assertEquals(expectedString, actualString);
     }
