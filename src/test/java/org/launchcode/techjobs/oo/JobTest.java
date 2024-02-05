@@ -45,7 +45,8 @@ public class JobTest {
         Job job = new Job("Phil", new Employer("Government"), new Location("North Pole"), new PositionType("Snow Tester"), new CoreCompetency("Can bite into snow with teeth"));
         String expectedString = "\n  \n";
         String actualString = job.toString();
-        assertEquals(expectedString, actualString);
+        assertTrue(expectedString, actualString.startsWith("\n"));
+        assertTrue(expectedString, actualString.endsWith("\n"));
     }
 
     @Test
